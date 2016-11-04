@@ -1,0 +1,21 @@
+<a href="#/">Powrót</a>
+
+<h1>Moja muzyka</h1>
+
+<ul ng-show="songs.length">
+    <li ng-repeat="song in songs">
+        {{ song }}
+    </li>
+</ul>
+<div ng-hide="songs.length">
+    <p style="color: grey"><i>Brak piosenek</i></p>
+</div>
+
+<h3>Dodaj piosenkę</h3>
+<label>Tytuł</label><br/>
+<input type="text" ng-model="songName">
+
+<button ng-click="addSong(songName)">Dodaj</button>
+<br><br>
+
+<button ng-click="clearSongs()">Wyczyść</button>
